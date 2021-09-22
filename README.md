@@ -11,7 +11,7 @@
 [![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
 
 <p align="center">
-<image src="docs/01-kk-logo-main.svg" alt="kontent logo" width="300" />
+<image src="docs/kk-logo.svg" alt="kontent logo" width="250" />
 <image src="docs/shopify-logo.png" 
 alt="shopify logo" width="200">
 </p>
@@ -27,7 +27,7 @@ alt="shopify logo" width="200">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kentico Kontent Headless CMS](https://kontent.ai).
+This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kontent by Kentico Headless CMS](https://kontent.ai).
 
 ## Features
 
@@ -58,7 +58,7 @@ In order to use this extension, you'll need to create a [Private App](https://he
 
 ![Shopify setup 02](docs/shopify-setup02.jpg)
 3. Enter the following information:
-- **Private app name** – Kentico Kontent Product selector
+- **Private app name** – Kontent Product selector
 - **Emergency developer email** – Your e-mail
 - **Admin API permissions** – No access for all options as the selector will leverage only the public Storefront API
 - **Storefront API** – Select Allow this app to access your storefront data using the Storefront API
@@ -98,7 +98,7 @@ The selector stores the following value format in JSON, which it also uses to di
 The fields are:
 
 - **id** – The internal ID of the product in Shopify; can be used for further API calls to get product data.
-- **handle** – A similar value to a URL Slug in Kentico Kontent; it's used within the product URL.
+- **handle** – A similar value to a URL Slug in Kontent; it's used within the product URL.
 - **title** – The name of the product.
 - **previewUrl** – The primary (featured) image for the product.
 - **sku** – The SKU for the product; taken from the first product variant.
@@ -123,7 +123,7 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 ## Additional Resources
 
 - [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kentico Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
 
