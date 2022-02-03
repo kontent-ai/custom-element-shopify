@@ -27,7 +27,7 @@ alt="shopify logo" width="200">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kentico Kontent Headless CMS](https://kontent.ai).
+This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kontent Headless CMS](https://kontent.ai).
 
 ## Features
 
@@ -123,9 +123,9 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 ## Additional Resources
 
 - [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kentico Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
-- [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
-- [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
+- [Kentico Kontent's Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
+- [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
+- [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
 [last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-shopify?style=for-the-badge
