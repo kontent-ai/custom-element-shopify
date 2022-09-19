@@ -1,5 +1,4 @@
-[![Core integration][core-shield]](https://kontent.ai/integrations/bynder)
-[![Gallery][gallery-shield]](https://kentico.github.io/kontent-custom-element-samples/gallery/)
+[![Core integration][core-shield]](https://kontent.ai/integrations/shopify)
 
 ![Last modified][last-commit]
 [![Issues][issues-shield]][issues-url]
@@ -7,13 +6,15 @@
 [![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
 
-[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kentico-kontent)
-[![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
+[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
+[![Discord][discord-shield]](https://discord.gg/SKCxwPtevJ)
 
 <p align="center">
-<image src="docs/01-kk-logo-main.svg" alt="kontent logo" width="300" />
-<image src="docs/shopify-logo.png" 
-alt="shopify logo" width="200">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/kai-logo-hor-neg-rgb.svg">
+  <img alt="Kontent.ai logo for dark/light scheme." src="docs/kai-logo-hor-pos-rgb.svg" width="300">
+</picture>
+<image src="docs/shopify-logo.png" alt="shopify logo" width="200">
 </p>
 
 <p align="center">
@@ -27,7 +28,7 @@ alt="shopify logo" width="200">
   <a href="#additional-resources">Resources</a>
 </p>
 
-This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kentico Kontent Headless CMS](https://kontent.ai).
+This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kontent.ai](https://kontent.ai).
 
 ## Features
 
@@ -44,7 +45,7 @@ This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-custom-element-shopify)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/custom-element-shopify)
 
 
 ## Shopify configuration
@@ -58,7 +59,7 @@ In order to use this extension, you'll need to create a [Private App](https://he
 
 ![Shopify setup 02](docs/shopify-setup02.jpg)
 3. Enter the following information:
-- **Private app name** – Kentico Kontent Product selector
+- **Private app name** – Kontent.ai Product selector
 - **Emergency developer email** – Your e-mail
 - **Admin API permissions** – No access for all options as the selector will leverage only the public Storefront API
 - **Storefront API** – Select Allow this app to access your storefront data using the Storefront API
@@ -98,7 +99,7 @@ The selector stores the following value format in JSON, which it also uses to di
 The fields are:
 
 - **id** – The internal ID of the product in Shopify; can be used for further API calls to get product data.
-- **handle** – A similar value to a URL Slug in Kentico Kontent; it's used within the product URL.
+- **handle** – A similar value to a URL Slug in Kontent.ai; it's used within the product URL.
 - **title** – The name of the product.
 - **previewUrl** – The primary (featured) image for the product.
 - **sku** – The SKU for the product; taken from the first product variant.
@@ -110,8 +111,8 @@ The selector also currently supports only a single selection. If you need to lin
 
 ## Contributors
 
-<a href="https://github.com/Kentico/kontent-custom-element-shopify/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kentico/kontent-custom-element-shopify" />
+<a href="https://github.com/kontent-ai/custom-element-shopify/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/custom-element-shopify" />
 </a>
 
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -122,25 +123,24 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kentico Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent.ai Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
 
 
-[last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-custom-element-shopify?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-custom-element-shopify.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kentico/kontent-custom-element-shopify/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kentico/kontent-custom-element-shopify.svg?style=for-the-badge
-[forks-url]: https://github.com/Kentico/kontent-custom-element-shopify/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kentico/kontent-custom-element-shopify.svg?style=for-the-badge
-[stars-url]: https://github.com/Kentico/kontent-custom-element-shopify/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kentico/kontent-custom-element-shopify.svg?style=for-the-badge
-[issues-url]: https://github.com/Kentico/kontent-custom-element-shopify/issues
-[license-shield]: https://img.shields.io/github/license/Kentico/kontent-custom-element-shopify.svg?style=for-the-badge
-[license-url]: https://github.com/Kentico/kontent-custom-element-shopify/blob/master/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/custom-element-shopify?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/custom-element-shopify.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/custom-element-shopify/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/custom-element-shopify.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/custom-element-shopify/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/custom-element-shopify.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/custom-element-shopify/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/custom-element-shopify.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/custom-element-shopify/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/custom-element-shopify.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/custom-element-shopify/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
-[gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&style=for-the-badge&color=51bce0
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
+[discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
 [product-demo]: docs/demo.gif?raw=true

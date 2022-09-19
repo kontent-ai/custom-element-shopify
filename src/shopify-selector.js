@@ -30,7 +30,7 @@ function renderSelected(value) {
 }
 
 function updateValue(value) {
-    // Send updated value to Kentico (send null in case of the empty string => element will not meet required condition).
+    // Send updated value to Kontent.ai (send null in case of the empty string => element will not meet required condition).
     if (!isDisabled) {
         if (value && value.id) {
             currentValue = value;
@@ -205,7 +205,7 @@ function setupSelector(value) {
 }
 
 function updateSize() {
-    // Update the custom element height in the Kentico UI.
+    // Update the custom element height in the Kontent.ai UI.
     const height = Math.ceil($("html").height());
     CustomElement.setHeight(height);
 }
@@ -237,7 +237,7 @@ function initCustomElement() {
         // React on disabled changed (e.g. when publishing the item)
         CustomElement.onDisabledChanged(updateDisabled);
     } catch (err) {
-        // Initialization with Kentico Custom element API failed (page displayed outside of the Kentico UI)
+        // Initialization with Kontent.ai Custom element API failed (page displayed outside of the Kontent.ai UI)
         console.error(err);
         setupSelector();
         updateDisabled(true);
