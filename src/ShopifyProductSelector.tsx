@@ -31,11 +31,11 @@ export const ShopifyProductSelector: FC = () => {
 
   useEffect(() => {
     CustomElement.init((el) => {
-      if (typeof el.config?.apiEndpoint !== 'string' || typeof el.config?.storeFrontAccessToken !== 'string') {
+      if (typeof el.config?.apiDomain !== 'string' || typeof el.config?.storeFrontAccessToken !== 'string') {
         throw new Error('Missing Shopify Endpoint URL or storeFront access token. Please provide the URL and the access token within the custom element JSON config.');
       }
       setConfig({
-        apiEndpoint: el.config.apiEndpoint,
+        apiDomain: el.config.apiDomain,
         storeFrontAccessToken: el.config.storeFrontAccessToken,
         isMultiSelect: !!el.config.isMultiSelect,
       });
@@ -67,7 +67,7 @@ export const ShopifyProductSelector: FC = () => {
 
   const search = (searchString: string) => {
     const client = Client.buildClient({
-      domain: config.apiEndpoint,
+      domain: config.apiDomain,
       storefrontAccessToken: config.storeFrontAccessToken
     });
 
@@ -117,7 +117,7 @@ export const ShopifyProductSelector: FC = () => {
 ShopifyProductSelector.displayName = 'ShopifyProductSelector';
 
 type Config = Readonly<{
-  apiEndpoint: string;
+  apiDomain: string;
   storeFrontAccessToken: string;
   isMultiSelect: boolean;
 }>;

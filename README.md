@@ -88,7 +88,7 @@ You will also need to provide the following JSON parameters for the custom eleme
 ```json
 {
   "storeFrontAccessToken": "<YOUR STOREFRONT ACCESS TOKEN>",
-  "apiEndpoint": "<YOUR STORE NAME>.myshopify.com",
+  "apiDomain": "<YOUR STORE NAME>.myshopify.com",
   "isMultiSelect": false
 }
 ```
