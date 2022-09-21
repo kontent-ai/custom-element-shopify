@@ -146,7 +146,7 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 [issues-shield]: https://img.shields.io/github/issues/kontent-ai/custom-element-shopify.svg?style=for-the-badge
 [issues-url]: https://github.com/kontent-ai/custom-element-shopify/issues
 [license-shield]: https://img.shields.io/github/license/kontent-ai/custom-element-shopify.svg?style=for-the-badge
-[license-url]: https://github.com/kontent-ai/custom-element-shopify/blob/master/LICENSE
+[license-url]: https://github.com/kontent-ai/custom-element-shopify/blob/main/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
