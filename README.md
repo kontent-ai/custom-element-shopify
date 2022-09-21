@@ -88,9 +88,11 @@ You will also need to provide the following JSON parameters for the custom eleme
 ```json
 {
   "storeFrontAccessToken": "<YOUR STOREFRONT ACCESS TOKEN>",
-  "apiEndpoint": "https://<YOUR STORE NAME>.myshopify.com/api/graphql"
+  "apiEndpoint": "<YOUR STORE NAME>.myshopify.com",
+  "isMultiSelect": false
 }
 ```
+Note that **isMultiSelect** is optional, if not provided, it will be considered as the value shown above.
 
 ## What is Saved
 The selector stores the following value format in JSON, which it also uses to display the selected product on first load:
@@ -113,9 +115,6 @@ The fields are:
 - **sku** – The SKU for the product; taken from the first product variant.
 
 You can use any of those values for both admin UI or in your project. Should you need to make more fields available, you can do so by customizing the code of the custom element.
-
-The selector also currently supports only a single selection. If you need to link multiple products, you can update the code, wrap the output value in an array and adjust the rendering code accordingly.
-
 
 ## Contributors
 
