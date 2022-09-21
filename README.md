@@ -28,13 +28,13 @@
   <a href="#additional-resources">Resources</a>
 </p>
 
-This  [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kontent.ai](https://kontent.ai).
+This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions) allows the user to search and link products from their [Shopify](https://shopify.com/) store into [Kontent.ai](https://kontent.ai).
 
 ## Features
 
 - Editors can
   - Search for products in Shopify e-commerce platform
-  - Select a single product (or one of it's variants)
+  - Select a single or multiple products (or one of its variants)
   
 
 ## Demo
@@ -123,9 +123,9 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Kontent.ai Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
-- [Custom Element documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/content-editing-extensions)
-- [Custom Element API reference](https://docs.kontent.ai/reference/custom-elements-js-api)
+- [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
+- [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
+- [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
 
 
 [last-commit]: https://img.shields.io/github/last-commit/kontent-ai/custom-element-shopify?style=for-the-badge
