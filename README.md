@@ -57,33 +57,19 @@ Or [run it locally](https://docs.netlify.com/functions/build/#test-locally).
 The integration's custom element is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
 
 ## Shopify configuration
-In order to use this extension, you'll need to create a [Private App](https://help.shopify.com/en/manual/apps/private-apps) in your Shopify store. This allows for the integration to connect into your product catalog through the [Storefront API](https://shopify.dev/docs/storefront-api) to search for products. Don't worry it's very simple. 
+In order to use this extension, you'll need to create a [Custom App](https://help.shopify.com/en/manual/apps/custom-apps) in your Shopify store.
+This allows the integration to connect into your product catalog through the [Storefront API](https://shopify.dev/docs/storefront-api) to search for products.
+You can follow the official tutorial to install a custom app [here](https://help.shopify.com/en/manual/apps/custom-apps).
 
-1. Navigate to your **Shopify admin** and select **Apps** from the main menu. Click **Manage private apps**.
+Remember to enable read access to product listings during the [Select API Scopes](https://help.shopify.com/en/manual/apps/custom-apps#select-api-scopes) part.
 
-![Shopify setup 01](docs/shopify-setup01.jpg)
-
-2. On the next screen, click **Create a new private app**.
-
-![Shopify setup 02](docs/shopify-setup02.jpg)
-3. Enter the following information:
-- **Private app name** – Kontent.ai Product selector
-- **Emergency developer email** – Your e-mail
-- **Admin API permissions** – No access for all options as the selector will leverage only the public Storefront API
-- **Storefront API** – Select Allow this app to access your storefront data using the Storefront API
-- **Storefront API permissions** – Select only Read products, variants, and collections as you only need to read products in the product selector
-
-![Shopify setup 03](docs/shopify-setup03.jpg)
-
-4. Submit the form and notice two things that you will need to configure the Product selector to access the Shopify API:
-
-- **Your e-shop's domain** – This is shown in your browser's address bar, in our case it is https://dancing-goat-sample.myshopify.com, with _dancing-goat-sample_ being the name of the store.
-- **The Storefront access token** – This is at the **very bottom** of the form so that you can authenticate requests against the Storefront API.
-
-That's it, you are now ready to configure your custom element inside of the Kontent application.
+After the installation is complete, [get the Storefront API access token](https://help.shopify.com/en/manual/apps/custom-apps#get-the-api-credentials-for-a-custom-app) as you will need it to configure the custom element in Kontent.ai.
 
 ## Configuring the Custom Element
-You will also need to provide the following JSON parameters for the custom element to connect to your store. Replace the placeholders with the actual values from the setup process above.
+You will need to provide the following JSON parameters for the custom element to connect to your store.
+
+- **storeFrontAccessToken** - Use the token from the Shopify configuration above.
+- **apiDomain** - This is shown in your browser's address bar when configuring Shopify, in our case it is https://dancing-goat-sample.myshopify.com, with _dancing-goat-sample_ being the name of the store.
 
 ```json
 {
