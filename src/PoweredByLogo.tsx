@@ -1,5 +1,6 @@
-import shopifyLogo from './images/shopify_logo.svg'
 import { FC } from "react";
+
+import shopifyLogo from './images/shopify_logo.svg'
 
 export const PoweredByLogo: FC = () => (
   <div style={{ float: 'right', padding: 10 }}>

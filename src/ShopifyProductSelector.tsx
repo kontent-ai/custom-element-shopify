@@ -1,10 +1,17 @@
-import { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
-import { Product } from "./types/product";
-import { SearchInput } from "./SearchInput";
-import { ProductTile } from "./ProductTile";
-import { SelectedProducts } from "./SelectedProducts";
+import {
+  FC,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState
+} from "react"
+import Client, { Product as ShopifyProduct, ProductVariant } from "shopify-buy";
+
 import { PoweredByLogo } from "./PoweredByLogo";
-import Client, { ProductVariant, Product as ShopifyProduct } from "shopify-buy";
+import { ProductTile } from "./ProductTile";
+import { SearchInput } from "./SearchInput";
+import { SelectedProducts } from "./SelectedProducts";
+import { Product } from "./types/product";
 
 export const ShopifyProductSelector: FC = () => {
   const [currentValue, setCurrentValue] = useState<null | ReadonlyArray<Product>>(null);
@@ -31,7 +38,7 @@ export const ShopifyProductSelector: FC = () => {
 
   useEffect(() => {
     CustomElement.init((el) => {
-      if (typeof el.config?.apiDomain !== 'string' || typeof el.config?.storeFrontAccessToken !== 'string') {
+      if (typeof el.config?.apiDomain !== 'string' || typeof el.config.storeFrontAccessToken !== 'string') {
         throw new Error('Missing Shopify Endpoint URL or storeFront access token. Please provide the URL and the access token within the custom element JSON config.');
       }
       setConfig({
@@ -67,6 +74,7 @@ export const ShopifyProductSelector: FC = () => {
 
   const search = (searchString: string) => {
     const client = Client.buildClient({
+      apiVersion: "2023-01",
       domain: config.apiDomain,
       storefrontAccessToken: config.storeFrontAccessToken
     });
@@ -77,34 +85,41 @@ export const ShopifyProductSelector: FC = () => {
       query: `title:${searchString}*`
     })
       .then(r => setSearchResults(r.map(p => ({
-          id: p.id.toString(),
-          title: p.title,
-          handle: (p as ShopifyProduct & { handle: string }).handle,
-          previewUrl: p.images[0]?.src,
-          sku: (p.variants[0] as (ProductVariant & { sku?: string }) | null)?.sku,
-        }))));
+        id: p.id.toString(),
+        title: p.title,
+        handle: (p as ShopifyProduct & { handle: string }).handle,
+        previewUrl: p.images[0]?.src,
+        sku: (p.variants[0] as (ProductVariant & { sku?: string }) | null)?.sku,
+      }))));
   };
+
+  const onRemove = config.isMultiSelect ? (p: Product) => updateValue(currentValue.filter(v => v !== p)) : undefined;
 
   return (
     <>
       <SelectedProducts
         products={currentValue}
-        onRemove={config.isMultiSelect ? p => updateValue(currentValue?.filter(v => v !== p)) : undefined}
+        onRemove={onRemove}
         isDisabled={isDisabled}
         onClear={() => updateValue([])}
       />
       <div className="search">
-        <SearchInput isDisabled={isDisabled} onSubmit={search} onClear={() => setSearchResults([])} />
+        <SearchInput
+          isDisabled={isDisabled}
+          onSubmit={search}
+          onClear={() => setSearchResults([])}
+        />
         {!!searchResults.length && (
           <div className="results">
             <h4>Search results ({searchResults.length})</h4>
-            {searchResults.map(r =>
+            {searchResults.map(r => (
               <ProductTile
                 key={r.id}
                 product={r}
-                onClick={() => updateValue(config?.isMultiSelect ? [...currentValue, r] : [r])}
+                onClick={() => updateValue(config.isMultiSelect ? [...currentValue, r] : [r])}
                 isDisabled={isDisabled}
               />
+            )
             )}
           </div>
         )}
