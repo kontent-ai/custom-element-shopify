@@ -1,9 +1,9 @@
 import { FC } from "react";
 
-import shopifyLogo from './images/shopify_logo.svg'
+import shopifyLogo from "./images/shopify_logo.svg";
 
 export const PoweredByLogo: FC = () => (
-  <div style={{ float: 'right', padding: 10 }}>
+  <div style={{ float: "right", padding: 10 }}>
     <span style={{ paddingRight: 5 }}>powered by</span>
     <img
       height={40}
@@ -14,4 +14,4 @@ export const PoweredByLogo: FC = () => (
   </div>
 );
 
-PoweredByLogo.displayName = 'PoweredByLogo';
+PoweredByLogo.displayName = "PoweredByLogo";
