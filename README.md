@@ -35,7 +35,6 @@ This [custom element](https://kontent.ai/learn/tutorials/develop-apps/integrate/
 - Editors can
   - Search for products in Shopify e-commerce platform
   - Select a single or multiple products (or one of its variants)
-  
 
 ## Demo
 
@@ -57,6 +56,7 @@ Or [run it locally](https://docs.netlify.com/functions/build/#test-locally).
 The integration's custom element is created with [Create React App](https://create-react-app.dev/). First you will need to install npm dependencies with `npm install`. Then use `npm run build` to build the integration or `npm run start` to start a local development server. See https://create-react-app.dev/docs/available-scripts for more scripts.
 
 ## Shopify configuration
+
 In order to use this extension, you'll need to create a [Custom App](https://help.shopify.com/en/manual/apps/custom-apps) in your Shopify store.
 This allows the integration to connect into your product catalog through the [Storefront API](https://shopify.dev/docs/storefront-api) to search for products.
 You can follow the official tutorial to install a custom app [here](https://help.shopify.com/en/manual/apps/custom-apps).
@@ -66,6 +66,7 @@ Remember to enable read access to product listings during the [Select API Scopes
 After the installation is complete, [get the Storefront API access token](https://help.shopify.com/en/manual/apps/custom-apps#get-the-api-credentials-for-a-custom-app) as you will need it to configure the custom element in Kontent.ai.
 
 ## Configuring the Custom Element
+
 You will need to provide the following JSON parameters for the custom element to connect to your store.
 
 - **storeFrontAccessToken** - Use the token from the Shopify configuration above.
@@ -78,9 +79,11 @@ You will need to provide the following JSON parameters for the custom element to
   "isMultiSelect": false
 }
 ```
+
 Note that **isMultiSelect** is optional, if not provided, it will be considered as the value shown above.
 
 ## What is Saved
+
 The selector stores the following value format in JSON, which it also uses to display the selected product on first load:
 
 ```json
@@ -92,6 +95,7 @@ The selector stores the following value format in JSON, which it also uses to di
   "sku": "BR-01"
 }
 ```
+
 The fields are:
 
 - **id** – The internal ID of the product in Shopify; can be used for further API calls to get product data.
@@ -119,7 +123,6 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 - [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 - [Custom Element documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions)
 - [Custom Element API reference](https://kontent.ai/learn/reference/custom-elements-js-api)
-
 
 [last-commit]: https://img.shields.io/github/last-commit/kontent-ai/integration-shopify?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/integration-shopify.svg?style=for-the-badge

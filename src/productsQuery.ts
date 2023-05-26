@@ -1,4 +1,5 @@
-export const createProductsQuery = (searchString: string) => `{
+export const createProductsQuery = (searchString: string) =>
+  `{
         products(first: 10, query: "title:${searchString}*") {
           edges {
             node {
@@ -25,22 +26,28 @@ export const createProductsQuery = (searchString: string) => `{
 
 export type ProductsQueryResponse = Readonly<{
   products: Readonly<{
-    edges: ReadonlyArray<Readonly<{
-      node: Readonly<{
-        id: string;
-        handle: string;
-        title: string;
-        images: Readonly<{
-          edges: ReadonlyArray<Readonly<{
-            node: Readonly<{ originalSrc: string }>; // or url?
-          }>>;
+    edges: ReadonlyArray<
+      Readonly<{
+        node: Readonly<{
+          id: string;
+          handle: string;
+          title: string;
+          images: Readonly<{
+            edges: ReadonlyArray<
+              Readonly<{
+                node: Readonly<{ originalSrc: string }>; // or url?
+              }>
+            >;
+          }>;
+          variants: Readonly<{
+            edges: ReadonlyArray<
+              Readonly<{
+                node: Readonly<{ sku?: string }>;
+              }>
+            >;
+          }>;
         }>;
-        variants: Readonly<{
-          edges: ReadonlyArray<Readonly<{
-            node: Readonly<{ sku?: string }>;
-          }>>;
-        }>;
-      }>;
-    }>>;
+      }>
+    >;
   }>;
 }>;
