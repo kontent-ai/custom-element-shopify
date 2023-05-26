@@ -11,7 +11,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/shopify-buy": "^2.10.10",
     "dprint": "^0.36.1",
-    "eslint-config-kontent-ai": "^0.1.4",
+    "eslint-config-kontent-ai": "^0.1.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
